@@ -19,4 +19,4 @@ def Dan():
     return "<h2>Dan is a meat!! :)</h2>"
 
 if __name__ == '__main__':
-    application.run(host='127.0.0.1', debug=True)
+    application.run(host='0.0.0.0', debug=True)
