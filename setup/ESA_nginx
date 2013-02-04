@@ -1,0 +1,13 @@
+server {
+	# Make site accessible from http://localhost/
+	server_name localhost;
+
+	location / {
+		include 			uwsgi_params;
+		uwsgi_pass			unix:/tmp/ESA.sock;
+		uwsgi_param 		UWSGI_PYHOME	/var/local/Comp4350/venv;
+		uwsgi_param			UWSGI_CHDIR		/var/local/Comp4350;
+		uwsgi_param 		UWSGI_MODULE	ESA;
+		uwsgi_param 	U	WSGI_CALLABLE	app;
+	}
+}
