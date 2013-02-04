@@ -5,7 +5,7 @@ server {
 	location / {
 		include 		uwsgi_params;
 		uwsgi_pass		unix:/tmp/ESA.sock;
-		uwsgi_param 	UWSGI_PYHOME	/var/local/ESA/vEnv;
+		uwsgi_param 	UWSGI_PYHOME	/var/local/ESA/venv;
 		uwsgi_param		UWSGI_CHDIR		/var/local/ESA;
 		uwsgi_param 	UWSGI_MODULE	ESA;
 		uwsgi_param 	UWSGI_CALLABLE	app;
